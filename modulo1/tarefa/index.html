@@ -14,45 +14,90 @@
     <div class="main">
         <div class="dados">
             <div class="dados-valores">
-                <label> Valor: </label>
+                <label for="valor"> Valor: </label>
                 <input type="number" id="valor" name="valor" value="200000">
             </div>
 
             <div class="dados-valores">
-                <label> Prazo(anos):</label>
+                <label for="prazo"> Prazo(anos):</label>
                 <input type="number" id="prazo" name="prazo" value="20">
             </div>
 
             <div class="dados-valores">
-                <label> Juros por ano: </label>
-                <input type="number" id="juros" name="juros" value="0.08">
+                <label for="jurosaa"> Juros por ano: </label>
+                <input type="number" id="jurosaa" name="juros" value="0.08">
             </div>
         </div>
-        <button> Simular </button>
+        <button onclick="simular()"> Simular </button>
     </div>
-
-    <div class="resultado">
-        <h1> Resultado </h1>
-    </div>
-    <div class="main">
+    <div>
+        <h2> Resultados </h2>
         <div class="dados">
             <div class="dados-valores">
-                <label> Valor: </label>
-                <input type="number" id="valor" name="valor" value="200000">
+                <label for="prestacoes"> Prazo (meses): </label>
+                <input type="number" id="prestacoes" readonly>
             </div>
 
             <div class="dados-valores">
-                <label> Prazo(anos):</label>
-                <input type="number" id="prazo" name="prazo" value="20">
+                <label for=jurosam""> Juros ao mês:</label>
+                <input type="number" id="jurosam" readonly>
             </div>
 
             <div class="dados-valores">
-                <label> Juros por ano: </label>
-                <input type="number" id="juros" name="juros" value="0.08">
+                <label for="jurosTotal"> Juros Total: </label>
+                <input type="number" id="jurosTotal" readonly>
             </div>
         </div>
-        <button> Simular </button>
     </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th> Prestação </th>
+                <th> Amortização </th>
+                <th> Juros </th>
+                <th> Total </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Primeira linha -->
+            <tr>
+                <td> 1 </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+            </tr>
+            <!-- Segunda linha -->
+            <tr>
+                <td> 2 </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+            </tr>
+            <!-- Terceira linha -->
+            <tr>
+                <td> 3 </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+            </tr>
+            <!-- Quarta linha -->
+            <tr>
+                <td> 4 </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+            </tr>
+            <!-- Quinta linha -->
+            <tr>
+                <td> 5 </td>
+                <td>  </td>
+                <td>  </td>
+                <td>  </td>
+            </tr>
+        </tbody>
+    </table>
     
     <script src="script.js">
     </script>

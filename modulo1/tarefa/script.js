@@ -1,39 +1,34 @@
 
-let valorProduto = document.getElementById('valor').value;
-let prazoAno = document.getElementById('prazo').value;
-let jurosAnual = document.getElementById('juros').value;
+function simular () {
+    let valor = document.getElementById("valor").valueAsNumber;
+    let prazo = document.getElementById("prazo").valueAsNumber;
+    let jurosaa = document.getElementById("jurosaa").valueAsNumber;
+    
+    let prestacoes = prazo * 12;
+    let jurosam = (1+jurosaa)**(1/12) - 1;
+    let amortizacao = valor / prestacoes;
 
-let jurosMensal;
-let prazoMeses;
+    document.getElementById("prestacoes").valueAsNumber = prestacoes;
+    document.getElementById("jurosam").valueAsNumber = jurosam;
 
-valorProduto = +valorProduto;
-prazoAno = +prazoAno;
-jurosAnual = +jurosAnual;
+    let tbody = document.querySelector("tbody");
+    let jurosTotal = 0;
+    for (let i = 0; i < prestacoes; i++) {
+        let saldoDevedor = valor - i*amortizacao;
+        let jurosPrestacao = saldoDevedor * jurosam;
+        let totalPrestacao = jurosPrestacao + amortizacao;
+        jurosTotal = jurosTotal + jurosPrestacao;
 
-console.log(valorProduto)
-console.log(prazoAno)
-console.log(jurosAnual)
-
-// juros mensal
-jurosMensal = (1.0 + jurosAnual)**(1.0/12.0) - 1.0;
-console.log(jurosMensal);
-
-// prazo total em meses
-prazoMeses = 12 * prazoAno;
-console.log(prazoMeses)
-
-function jurosAcumladoCalculo (valorProduto, jurosMensal, prazoMeses) {
-
-    console.log('teste');
-    let jurosAcumlado = 0;
-    let jurosTabela = [];
-    let amortizacao = valorProduto / prazoMeses;
-    let contador = 0;
-    for (let mes=0; mes<= prazoMeses; mes++ ){
-        contador = (valorProduto - mes*amortizacao) * jurosMensal;
-        jurosAcumlado += contador;
-        console.log(contador.toFixed(2));
-        console.log(jurosAcumlado.toFixed(2));
+        if (i < 5){
+            let tr = tbody.children[i];
+            tr.children[1].textContent = amortizacao.toFixed(2)
+            tr.children[2].textContent = jurosPrestacao.toFixed(2)
+            tr.children[3].textContent = jurosPrestacao.toFixed(2)
+        }
     }
 
+    document.getElementById("jurosTotal").valueAsNumber = jurosTotal.toFixed(2);
+
 }
+
+simular();

@@ -1,3 +1,10 @@
+body {
+    max-width: 1040px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+
 .titulo {
     display: flex;
     justify-content: center;
@@ -7,13 +14,19 @@
 .dados {
     display: flex;
     justify-content: space-between;
-    width: 1040px;
-    margin: auto;
 }
 
 .dados-valores {
     display: flex;
     flex-direction: column;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    font-size: 1.2rem;
 }
 
 
@@ -27,4 +40,12 @@
 .main button {
     margin-top: 10px;
     width: 100px;
+    font-size: 1.2rem;
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid black;
+    font-size: 1.2rem;
+    width: auto;
 }
