@@ -1,0 +1,30 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.dados {
+    display: flex;
+    justify-content: space-between;
+    width: 1040px;
+    margin: auto;
+}
+
+.dados-valores {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 1040px;   
+}
+
+.main button {
+    margin-top: 10px;
+    width: 100px;
+}

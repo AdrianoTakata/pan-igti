@@ -1,0 +1,44 @@
+html {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.lista-bonita {
+    color:#353535;
+
+}
+
+ul.lista-bonita > li {
+    list-style: none;   
+    border-width: 2px;
+    border-color: #a0a0a0;
+    border-left-style: solid;
+    border-right-style: solid;
+    padding: 4px 8px;
+}
+
+ul.lista-bonita > li:first-child {
+    border-top-style: solid;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+ul.lista-bonita > li:last-child {
+    border-bottom-style: solid;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+ul.lista-bonita > li:hover {
+    background-color: #ebebeb;
+}
+
+ul.lista-bonita > li.selecionado {
+    background-color: #bfdbff;
+    border-color: #2e79db;
+    border-bottom-style: solid;
+}
+
+ul.lista-bonita > li:not(.selecionado) + li {
+    border-top-style: solid;
+}
