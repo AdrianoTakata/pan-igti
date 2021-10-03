@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main {
+    background-color: white;
+    width: 1040px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.app {
+    display: flex;
+}
+
+.app > div {
+    padding: 8px;
+    width: 100%;
+}
+
+#left-side {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 35%;
+}
+
+#right-side {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 65%;
+}
+
+fieldset > label {
+    display:block;
+}
+
+
+th {text-align: left;}
