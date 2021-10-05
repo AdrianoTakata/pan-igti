@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+td {
+    border-top: 1px solid black;
+}
+
+#rating {
+    color: yellowgreen;
+    cursor: pointer;
+}
