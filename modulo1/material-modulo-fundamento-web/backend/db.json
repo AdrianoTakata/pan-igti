@@ -1199,6 +1199,12 @@
       "name": "Ray Derricoat",
       "salary": 7600,
       "role_id": 6
+    },
+    {
+      "name": "Adriano Takata",
+      "salary": 20000,
+      "role_id": 6,
+      "id": 201
     }
   ],
   "roles": [

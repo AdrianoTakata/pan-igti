@@ -2,7 +2,6 @@ let employees = [];
 let roles = [];
 let selectedItem;
 const elList = document.querySelector('ul');
-const elErrors = document.querySelector('#errors');
 const elForm = document.querySelector('form');
 const bdelete = document.getElementById("bdelete");
 const bcancel = document.getElementById("bcancel");
@@ -14,7 +13,7 @@ async function init() {
     renderData();
     clearSelection();
     bcancel.addEventListener("click", clearSelection);
-    elForm.addEventListener("submit", onSubmit);
+    bsubmit.addEventListener("click", onSubmit);
     bdelete.addEventListener("click", onDelete);
 }
 
@@ -85,8 +84,8 @@ async function onDelete(){
 
 function renderData() {
     elList.innerHTML = "";
-    //employees.forEach((employee) => {
-    for (let employee of employees){
+    employees.forEach((employee) => {
+    //for (let employee of employees){
         let role = roles.find((role) => {
             return role.id == employee.role_id
         }
@@ -99,7 +98,7 @@ function renderData() {
         li.append(divName, divRole);
         elList.appendChild(li);
         li.addEventListener('click', (evt) => selectItem(employee, evt.currentTarget));
-    }
+    })
 }
 
 function renderRoles() {
